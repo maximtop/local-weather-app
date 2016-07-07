@@ -1,0 +1,17 @@
+body {
+    background-color: #404245;
+    color: white;
+}
+
+.main {
+    padding-top: 70px ;
+    width: 600px;
+    min-height: 500px;
+    float: none;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
