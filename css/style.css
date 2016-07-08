@@ -19,3 +19,11 @@ h1 {
 #location {
     font-size: 25px;
 }
+
+.temp {
+    font-size: 25px;
+}
+
+#weather-icon {
+    font-size: 70px;
+}
