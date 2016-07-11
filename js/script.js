@@ -7,12 +7,15 @@ const WEATHER_APP_KEY = "51e580c83a42e14ac0a593f7ae0814e9";
 $(document).ready(function () {
 
 
+
     function dataByIp() {
-        return $.getJSON("http://ipinfo.io");
+        return $.ajax({
+            url : "http://ipinfo.io",
+            dataType : "jsonp"
+    });
     }
 
     dataByIp().done(function (ipData) {
-        $('#location').text(ipData.city + ', ' + ipData.country);
         var location = ipData.loc;
         var locationArray = location.split(',');
         var cityLat = locationArray[0];
@@ -54,6 +57,8 @@ $(document).ready(function () {
                 $("#weather-icon").addClass(icon);
                 $('#description').text(data.weather[0].description);
                 $('#temp').text(Math.round(data.main.temp));
+                $('#location').text(data.name + ', ' + ipData.country);
+
             })
 
         }
